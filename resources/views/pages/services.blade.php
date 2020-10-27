@@ -8,8 +8,8 @@
         <title>{{config('app.name', 'LTEST')}}</title>
     </head>
     <body>
-        <h1>About</h1>
-        <p>This is the about page</p>
+        <h1>Services</h1>
+        <p>This is the service page</p>
         <p>Test Laravel Project by Kowshid</p>
     </body>
 </html>

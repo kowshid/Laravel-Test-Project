@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -8,8 +7,7 @@
         <title>{{config('app.name', 'LTEST')}}</title>
     </head>
     <body>
-        <h1>About</h1>
-        <p>This is the about page</p>
-        <p>Test Laravel Project by Kowshid</p>
+        <h1>Laravel Test Project</h1>
+        <p>This my laravel project from scracth</p>
     </body>
 </html>
