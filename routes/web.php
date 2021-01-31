@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PagesController;
+use App\Http\Controllers\PostsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,16 +14,31 @@ use App\Http\Controllers\PagesController;
 |
 */
 
-// Route::get('/about', function() {
-//     return view('pages.about');
-// });
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+//
+//Route::get('/contact', function () {
+//    //return view('welcome');
+//    return "Hi, this is contact";
+//});
+//
+//Route::get('/about', function () {
+//    //return view('welcome');
+//    return "This the about Page";
+//});
+//
+//Route::get('/post/{id}', function ($id) {
+//    //return view('welcome');
+//    return "This the post no. ".$id;
+//});
+//
+//Route::get('/admin/post/example', array('as'=>'admin.post', function (){
+//    $url = route('admin.post');
+//
+//    return "This url is ".$url;
+//}));
 
-Route::get('/hello', function () {
-    return 'Hello World';
-});
+//Route::get('/post/{id}', [PostsController::class, 'index']);
 
-Route::get('/',  [PagesController::class, 'index']);
-
-Route::get('/about', [PagesController::class, 'about']);
-
-Route::get('/services', [PagesController::class, 'services']);
+Route::resource('posts', PostsController::class);
