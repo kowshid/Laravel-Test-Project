@@ -14,14 +14,11 @@ use App\Http\Controllers\PostsController;
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-//
-//Route::get('/contact', function () {
-//    //return view('welcome');
-//    return "Hi, this is contact";
-//});
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/contact', [PostsController::class, 'contact']);
 //
 //Route::get('/about', function () {
 //    //return view('welcome');
@@ -41,4 +38,6 @@ use App\Http\Controllers\PostsController;
 
 //Route::get('/post/{id}', [PostsController::class, 'index']);
 
-Route::resource('posts', PostsController::class);
+//Route::resource('post', PostsController::class);
+
+Route::get('post/{id}/{name}', [PostsController::class, 'showPost']);
